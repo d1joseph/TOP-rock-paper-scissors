@@ -1,0 +1,17 @@
+/*  */
+:root {
+    --main-bg-color: #0E063D;
+    --main-text-color: #ffffff;
+    --machine-color: #FF7A00;
+    --human-color: #46E0C4;
+    --main-font: 'Nidus Sans'
+}
+
+body {
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+    font-family: var(--main-font);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
