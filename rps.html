@@ -9,25 +9,32 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <header>
-        <h1>Ultime Rock Paper Scissors</h1>
-        <h5>by d1joseph</h5>
+        <h1 class="title">Ultime Roshambo</h1>
+        <h5 class="author">by d1joseph</h5>
     </header>
     <body>
         <div class="main-display">
             <!-- outcome-msg -->
             <div class="outcome-msg"></div>
-            <!-- score-board -->
-            <div class="score-board">
-                <p>Best of N games</p>
-                <h3>0-0</h3>
-                <p>VS</p>
-                <div class="machine-window">
-                    <img src="assets/fist-svgrepo-com.svg" alt="">
-                </div>
-                <div class="player-window">
-                    <img src="assets/paper-svgrepo-com.svg" alt="">
-                </div>
+            <!-- left throw window-->
+            <div class="column">
+                <img src="assets/fist-svgrepo-com.svg" alt="">
             </div>
+            <!-- score-board -->
+            <div class="column score-board">
+                <p>Best of N games</p>
+                <h3 class="score">0-0</h3>
+            </div>
+            <!-- right throw window -->
+            <div class="column">
+                <img src="assets/paper-svgrepo-com.svg" alt="">
+            </div>
+        </div>
+        <!-- player-info-display -->
+        <div class="player-info">
+            <div class="column player">Player</div>
+            <div class="column vs-text">VS</div>
+            <div class="column machine">Machine</div>
         </div>
         <button class="throw">
             Throw!
