@@ -1,4 +1,4 @@
-# Rock paper scissors rules
+# Python text based version of Roshambo.
 import random as r
 
 """
@@ -71,3 +71,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    

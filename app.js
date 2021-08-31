@@ -8,6 +8,7 @@ machine_score = 0;
 player_score = 0;
 let n_games = 5; // number of games
 const symbols = ['rock-symbol', 'paper-symbol', 'scissors-symbol']; // roshambo symbols
+let player_symbol;
 
 // returns a random integer between 1 and 3
 const rand = () => {
@@ -24,50 +25,52 @@ const machine_symbol_throw = () => {
     return symbols[rand()];
 }
 
-// player throws symbol
+// player throws symbol and sets player symbol variable to string value
 const player_symbol_throw = (clicked_id) => {
     console.log(clicked_id);
-    return(clicked_id);
+    player_symbol = clicked_id;
 }
 
-// game loop logic
+// game loop logic.
 const game_loop = () => {
-    // the round starts when the player throws a symbol
-    // the machine will also then throw a symbol and round evaluation begins
+    // the round starts when the player throws a symbol.
+    // the machine will also then throw a symbol and round evaluation begins.
     while (n_games > 0) {
         let machine_symbol = machine_symbol_throw();
-        let player_symbol = player_symbol_throw();
 
-        // case 1 - rock beats scissors
+        // case 1 - rock beats scissors.
         if (player_symbol == symbols[0] && machine_symbol == symbols[2]) {
             player_score += 1;
             console.log('Rock beats scissors, human wins.');
             show_current_score();
-        // case 2 - paper beats rock    
+        // case 2 - paper beats rock.
         } else if (player_symbol == symbols[1] && machine_symbol == symbols[0]) {
             player_score += 1;
             console.log('Paper beats rock, human wins.');
             show_current_score();
-        // case 3 - scissors beats paper
+        // case 3 - scissors beats paper.
         } else if (player_symbol == symbols[2] && machine_symbol == symbols[1]) {
             player_score += 1;
             console.log('Scissors beats paper, human wins.');
             show_current_score();
-        // case 4 - symbols match, tie game, throw again
+        // case 4 - symbols match, tie game, throw again.
         } else if (player_symbol == machine_symbol) {
             console.log('Tie game, throw again.');
             show_current_score();
+        // any outcome outside of case 1-4 means machine wins. YAAAAAAAAS
         } else {
             machine_score += 1;
             console.log(`${machine_symbol} beats ${player_symbol}, machine wins.`);
             show_current_score();
         }
-
         // decrement the round
         n_games -= 1;
     };
-
 }
+
+// event listener and handling
+let button = document.querySelector("button");
+button.addEventListener("click", game_loop);
 
 /*
 To do:
