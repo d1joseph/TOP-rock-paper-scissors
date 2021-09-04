@@ -76,9 +76,18 @@ img {
     font-family: var(--body-font);
 }
 
-.score {
+.scores {
+    display: flex;
+    flex-direction: row;
     margin: 10px;
     font-size: 80px;
+}
+
+.scores span {
+    display: flex;
+    width: 70px;
+    align-items: center;
+    justify-content: center;
 }
 
 .player-info {

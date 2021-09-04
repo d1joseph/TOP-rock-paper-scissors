@@ -23,8 +23,12 @@
             </div>
             <!-- score-board -->
             <div class="column score-board">
-                <p class="num-games">Best of N games</p>
-                <h3 class="score">0-0</h3>
+                <p class="rounds-left"></p>
+                <div class="scores">
+                    <p class=player-scoreboard>0</p>
+                    <span>-</span>
+                    <p class=machine-scoreboard>0</p>
+                </div>
             </div>
             <!-- right throw window -->
             <div class="column">
@@ -39,19 +43,19 @@
         </div>
         <!-- btn-group -->
         <div class="btn-container">
-            <button class="btn">
-                <img src="/assets/light/fist-icon.svg" alt="rock" id="rock-symbol" onclick="player_symbol_throw(this.id)">
+            <button class="btn rock">
+                <img src="/assets/light/fist-icon.svg" alt="rock" id="rock" onclick="player_symbol_throw(this.id)">
             </button>
-            <button class="btn">
-                <img src="/assets/light/paper-icon.svg" alt="rock" id="paper-symbol" onclick="player_symbol_throw(this.id)">
+            <button class="btn paper">
+                <img src="/assets/light/paper-icon.svg" alt="paper" id="paper" onclick="player_symbol_throw(this.id)">
             </button>
-            <button class="btn">
-                <img src="/assets/light/scissors-icon.svg" alt="rock" id="scissors-symbol" onclick="player_symbol_throw(this.id)">
+            <button class="btn scissors">
+                <img src="/assets/light/scissors-icon.svg" alt="scissors" id="scissors" onclick="player_symbol_throw(this.id)">
             </button>
         </div>
         <footer class="footer">
             <p>v1.0</p>
         </footer>
-        <script src="app.js" async defer></script>
+        <script src="game.js" async></script>
     </body>
 </html>
