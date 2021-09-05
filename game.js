@@ -94,8 +94,33 @@ const game = () => {
 
     // game over
     const gameOver = (playerSymbols, roundsLeft) => {
+        const chooseMove = document.querySelector('.move');
+        const result = document.querySelector('.result');
+        // const reloadBtn = document.querySelector('.reload');
+
+        playerSymbols.forEach(symbol => {
+            symbol.style.display = 'none';
+        })
+
+        if (playerScore > machineScore){
+            result.style.fontSize = '2rem';
+            result.innerText = 'You win!';
+            result.style.color = '#308D46';
+        }
+        else if(playerScore < machineScore){
+            result.style.fontSize = '2rem';
+            result.innerText = 'You lost.';
+            result.style.color = 'red';
+        }
+        else{
+            result.style.fontSize = '2rem';
+            result.innerText = 'Tie game -.-';
+            result.style.color = 'grey';
+        }
 
     }
 
-    // finish writing game over handler, functions and integrate with HTML.
+    // To do: refactor and integrate with HTML.
+
+    // playGame();
 }
