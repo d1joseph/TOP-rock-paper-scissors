@@ -123,15 +123,16 @@ img {
     align-items: center;
 }
 
-.btn {
+button {
     height: 100px;
     width: 100px;
     margin: 5px;
     background-color: #0E063D;
+    color: #ffffff;
     border-radius: 8px;
 }
 
-.btn img {
+button img {
     height: 60px;
     width: 60px;
 }

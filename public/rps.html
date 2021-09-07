@@ -15,15 +15,15 @@
     </header>
     <body>
         <div class="main-display">
-            <!-- outcome-msg -->
-            <div class="outcome-msg"></div>
             <!-- left throw window-->
             <div class="column">
-                <img src="assets/light/fist-icon.svg" alt="">
+                <img src="/assets/light/fist-icon.svg" alt="">
             </div>
             <!-- score-board -->
             <div class="column score-board">
                 <p class="rounds-left"></p>
+                <!-- outcome-msg -->
+                <div class="outcome-msg"></div>
                 <div class="scores">
                     <p class=player-scoreboard>0</p>
                     <span>-</span>
@@ -32,7 +32,7 @@
             </div>
             <!-- right throw window -->
             <div class="column">
-                <img src="assets/light/paper-icon.svg" alt="">
+                <img src="/assets/light/paper-icon.svg" alt="">
             </div>
         </div>
         <!-- player-info-display -->
@@ -43,15 +43,9 @@
         </div>
         <!-- btn-group -->
         <div class="btn-container">
-            <button class="btn rock">
-                <img src="/assets/light/fist-icon.svg" alt="rock" id="rock" onclick="player_symbol_throw(this.id)">
-            </button>
-            <button class="btn paper">
-                <img src="/assets/light/paper-icon.svg" alt="paper" id="paper" onclick="player_symbol_throw(this.id)">
-            </button>
-            <button class="btn scissors">
-                <img src="/assets/light/scissors-icon.svg" alt="scissors" id="scissors" onclick="player_symbol_throw(this.id)">
-            </button>
+            <button class="rock">rock</button>
+            <button class="paper">paper</button>
+            <button class="scissors">scissors</button>
         </div>
         <footer class="footer">
             <p>v1.0</p>
