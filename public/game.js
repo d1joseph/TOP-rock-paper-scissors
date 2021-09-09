@@ -26,6 +26,7 @@ const game = () => {
                 const randChoice = Math.floor(Math.random() * 3);
                 const machineChoice = machineSymbols[randChoice];
                 
+                
                 // determine winner
                 winner(this.innerText, machineChoice);
 
@@ -35,7 +36,6 @@ const game = () => {
                 }
             })
         })
-
     }
 
     // function to determine winner
@@ -88,7 +88,7 @@ const game = () => {
     const gameOver = (playerSymbols, roundsLeft) => {
         const chooseMove = document.querySelector('.move');
         const outcomeMsg = document.querySelector('.outcome-msg');
-        // const reloadBtn = document.querySelector('.reload');
+        const reloadBtn = document.querySelector('.reload-btn');
 
         playerSymbols.forEach(symbol => {
             symbol.style.display = 'none';
@@ -109,20 +109,20 @@ const game = () => {
             outcomeMsg.innerText = 'Tie game -.-';
             outcomeMsg.style.color = 'grey';
         }
-
+        reloadBtn.addEventListener('click', () =>{
+            window.location.reload();
+        })
     }
 
-    
     playGame()
-
 }
 game();
 
 /* To do:
     * gameOver() function added
-    * integrate anime.js library
+    * integrate anime.js library 
     * animate symbols selections to display in .column element 
-    * Add reload button and reload() function to reset the game
+    * Add reload button and reload() function to reset the game - DONE
     * styling and layout update
     * add button wrapper with symbol imgs to button elements
     * mobile optimisation

@@ -8,6 +8,11 @@
     --body-font: 'Open Sans';
 }
 
+body{
+    height: 100vh;
+    width: auto;
+}
+
 header {
     display: flex;
     width: 100%;
