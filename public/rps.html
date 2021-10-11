@@ -10,14 +10,13 @@
     </head>
     <!-- outcome-msg -->
     <header>
-        <h1 class="title">Ultimate Roshambo</h1>
-        <h5 class="author"> <a href="https://github.com/d1joseph" target="_">by d1joseph</a></h5>
+        <h1 class="title">Roshambo</h1>
     </header>
     <body>
         <div class="main-display">
-            <!-- left throw window-->
+            <!-- player -->
             <div class="column">
-                <img src="/assets/light/fist-icon.svg" alt="" class="player-symbol">
+                <img src="/assets/light/paper-icon.svg" id="player" alt="" class="player-symbol">
             </div>
             <!-- score-board -->
             <div class="column score-board">
@@ -30,9 +29,9 @@
                     <p class=machine-scoreboard>0</p>
                 </div>
             </div>
-            <!-- right throw window -->
+            <!-- machine -->
             <div class="column">
-                <img src="/assets/light/paper-icon.svg" alt="" class="machine-symbol">
+                <img src="/assets/light/scissors-icon.svg" id="machine" alt="" class="machine-symbol">
             </div>
         </div>
         <!-- player-info-display -->
@@ -43,13 +42,13 @@
         </div>
         <!-- btn-group -->
         <div class="btn-container">
-            <button class="rock">rock</button>
-            <button class="paper">paper</button>
-            <button class="scissors">scissors</button>
+            <button class="rock" onclick="document.getElementById('player').src='/assets/light/fist-icon.svg'">rock</button>
+            <button class="paper" onclick="document.getElementById('player').src='/assets/light/paper-icon.svg'">paper</button>
+            <button class="scissors" onclick="document.getElementById('player').src='/assets/light/scissors-icon.svg'">scissors</button>
             <button class="reload-btn">Replay game</button>
         </div>
         <footer class="footer">
-            <p>v1.0</p>
+            <p>v0.0.1-alpha</p>
         </footer>
         <script src="game.js" async type="module"></script>
     </body>

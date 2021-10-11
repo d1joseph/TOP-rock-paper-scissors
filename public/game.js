@@ -1,6 +1,6 @@
 // game.js
 
-// main game logic
+// game logic
 const game = () => {
     let playerScore = 0;
     let machineScore = 0;
@@ -25,7 +25,19 @@ const game = () => {
                 // machine choice randint
                 const randChoice = Math.floor(Math.random() * 3);
                 const machineChoice = machineSymbols[randChoice];
+                let machineIcon = document.getElementById('machine');
                 
+                // set the icon img element == to the machine choice
+                if (machineChoice === 'rock') {
+                    machineIcon.src = '/assets/light/fist-icon.svg';
+                    
+                } else if (machineChoice === 'paper') {
+                    machineIcon.src = '/assets/light/paper-icon.svg';
+                    
+                } else if (machineChoice === 'scissors') {
+                    machineIcon.src = '/assets/light/scissors-icon.svg';
+                    
+                }
                 
                 // determine winner
                 winner(this.innerText, machineChoice);
@@ -46,9 +58,11 @@ const game = () => {
         player.toLowerCase();
         machine.toLowerCase();
 
+        // tie
         if(player === machine){
             outcomeMsg.textContent = 'Tie'
         }
+        // rock > paper
         else if(player == 'rock'){
             if(machine == 'paper'){
                 outcomeMsg.textContent = 'Machine wins.';
@@ -60,6 +74,7 @@ const game = () => {
                 playerScoreboard.textContent = playerScore;
             }
         }
+        // rock > scissors
         else if(player == 'scissors'){
             if(machine == 'rock'){
                 outcomeMsg.textContent = 'Machine wins.';
@@ -71,6 +86,7 @@ const game = () => {
                 playerScoreboard.textContent = playerScore;
             }
         }
+        // scissors > paper 
         else if(player == 'paper'){
             if(machine == 'scissors'){
                 outcomeMsg.textContent = 'Machine wins.';
@@ -113,7 +129,6 @@ const game = () => {
             window.location.reload();
         })
     }
-
     playGame()
 }
 game();
