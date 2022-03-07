@@ -10,12 +10,12 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        <header>
+            <h1 class="app-title">Roshambo</h1>
+            <h3 class="app-description">The ancient game of Rock Raper Scissors</h3>
+        </header>
+        <!-- HUD display for scores, rounds remaining and round outcomes -->
         <div class="container">
-            <header>
-                <h1 class="app-title">Roshambo</h1>
-                <h3 class="app-description">The ancient game of rock, paper or scissors</h3>
-            </header>
-            <!-- HUD display for scores, rounds remaining and round outcomes -->
             <div class="hud-display">
                 <h1 class="message">Choose Rock, Paper Or Scissors To Begin!</h1>
                 <div class="row score">
@@ -26,23 +26,24 @@
             <!-- Main display for user and machine rock/paper/scissors symbols -->
             <div class="main-display">
                 <div class="left">
-                    <img id="player" src="" alt="">
+                    <img id="player" src="../assets/dark/fist-svgrepo-com.svg" alt="">
                 </div>
                 <div class="right">
-                    <img id="machine" src="" alt="">
+                    <img id="machine" src="../assets/dark/paper-svgrepo-com.svg" alt="">
                 </div>
             </div>
             <!-- Controls i.e. buttons for each symbol and game reset/replay buttons -->
             <div class="controls">
                 <div class="row symbols">
-                    <button id="rock">Rock</button>
-                    <button id="paper">Paper</button>
-                    <button id="scissors">Scissors</button>
+                    <button id="rock" onclick="render()">Rock</button>
+                    <button id="paper" onclick="render()">Paper</button>
+                    <button id="scissors" onclick="render()">Scissors</button>
                 </div>
                 <button id="reset">Reset</button>
             </div>
         </div>
-        <script src="game.js" async type="module"></script>
+        <!-- script src="game.js" async type="module"></script -->
+        <script src="src/render.js"></script>
     </body>
     <footer class="footer">
         <p>Made by Dhiv Joseph</p>
