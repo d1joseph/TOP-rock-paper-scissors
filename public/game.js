@@ -4,9 +4,9 @@
 const game = () => {
     let playerScore = 0;
     let machineScore = 0;
-    let rounds = 0;
+    let rounds = 5;
 
-    // play game
+    // start here
     const playGame = () => {
         const rockBtn = document.querySelector(".rock");
         const paperBtn = document.querySelector(".paper");
@@ -14,18 +14,19 @@ const game = () => {
         const playerSymbols = [rockBtn, paperBtn, scissorsBtn];
         const machineSymbols = ['rock', 'paper', 'scissors'];
 
+        // main game loop
         playerSymbols.forEach(symbol => {
             symbol.addEventListener('click', function(){
                 
-                // display number of decrementing rounds left
+                // display rounds remaining
                 const roundsLeft = document.querySelector('.rounds-left');
                 rounds++;
                 roundsLeft.innerText = `Rounds left: ${10-rounds}`;
 
-                // machine choice randint
+                // machine random choice
                 const randChoice = Math.floor(Math.random() * 3);
                 const machineChoice = machineSymbols[randChoice];
-                let machineIcon = document.getElementById('machine');
+                const machineIcon = document.getElementById('machine');
                 
                 // set the icon img element == to the machine choice
                 if (machineChoice === 'rock') {
@@ -104,7 +105,7 @@ const game = () => {
     const gameOver = (playerSymbols, roundsLeft) => {
         const chooseMove = document.querySelector('.move');
         const outcomeMsg = document.querySelector('.outcome-msg');
-        const reloadBtn = document.querySelector('.reload-btn');
+        const reloadBtn = document.querySelector('.replay-btn');
 
         playerSymbols.forEach(symbol => {
             symbol.style.display = 'none';
@@ -137,7 +138,6 @@ game();
     * gameOver() function added
     * integrate anime.js library 
     * animate symbols selections to display in .column element 
-    * Add reload button and reload() function to reset the game - DONE
     * styling and layout update
     * add button wrapper with symbol imgs to button elements
     * mobile optimisation

@@ -1,55 +1,51 @@
 <!DOCTYPE html>
+<!-- made for The Odin Project:https://www.theodinproject.com/paths/foundations/courses/foundations/lessons/rock-paper-scissors -->
 <html>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Ultimate Roshambo - Battle for playground glory and enter the halls of Valhalla.</title>
+        <title>Roshambo - The ancient game of rock, paper or scissors.</title>
         <meta name="description" content="Ultimate Rock Paper Scissors, battle for playground glory and enter the halls of Valhalla.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
     </head>
-    <!-- outcome-msg -->
-    <header>
-        <h1 class="title">Roshambo</h1>
-    </header>
     <body>
-        <div class="main-display">
-            <!-- player -->
-            <div class="column">
-                <img src="/assets/light/paper-icon.svg" id="player" alt="" class="player-symbol">
-            </div>
-            <!-- score-board -->
-            <div class="column score-board">
-                <p class="rounds-left"></p>
-                <!-- outcome-msg -->
-                <div class="outcome-msg"></div>
-                <div class="scores">
-                    <p class=player-scoreboard>0</p>
-                    <span>-</span>
-                    <p class=machine-scoreboard>0</p>
+        <div class="container">
+            <header>
+                <h1 class="app-title">Roshambo</h1>
+                <h3 class="app-description">The ancient game of rock, paper or scissors</h3>
+            </header>
+            <!-- HUD display for scores, rounds remaining and round outcomes -->
+            <div class="hud-display">
+                <h1 class="message">Choose Rock, Paper Or Scissors To Begin!</h1>
+                <div class="row score">
+                    <h2 class="score-player">0</h2>
+                    <h2 class="score-machine">0</h2>
                 </div>
             </div>
-            <!-- machine -->
-            <div class="column">
-                <img src="/assets/light/scissors-icon.svg" id="machine" alt="" class="machine-symbol">
+            <!-- Main display for user and machine rock/paper/scissors symbols -->
+            <div class="main-display">
+                <div class="left">
+                    <img id="player" src="" alt="">
+                </div>
+                <div class="right">
+                    <img id="machine" src="" alt="">
+                </div>
+            </div>
+            <!-- Controls i.e. buttons for each symbol and game reset/replay buttons -->
+            <div class="controls">
+                <div class="row symbols">
+                    <button id="rock">Rock</button>
+                    <button id="paper">Paper</button>
+                    <button id="scissors">Scissors</button>
+                </div>
+                <button id="reset">Reset</button>
             </div>
         </div>
-        <!-- player-info-display -->
-        <div class="player-info">
-            <div class="column player">Player</div>
-            <div class="column vs-text">VS</div>
-            <div class="column machine">Machine</div>
-        </div>
-        <!-- btn-group -->
-        <div class="btn-container">
-            <button class="rock" onclick="document.getElementById('player').src='/assets/light/fist-icon.svg'">rock</button>
-            <button class="paper" onclick="document.getElementById('player').src='/assets/light/paper-icon.svg'">paper</button>
-            <button class="scissors" onclick="document.getElementById('player').src='/assets/light/scissors-icon.svg'">scissors</button>
-            <button class="reload-btn">Replay game</button>
-        </div>
-        <footer class="footer">
-            <p>v0.0.1-alpha</p>
-        </footer>
         <script src="game.js" async type="module"></script>
     </body>
+    <footer class="footer">
+        <p>Made by Dhiv Joseph</p>
+        <p>v0.1.0</p>
+    </footer>
 </html>

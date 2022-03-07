@@ -1,153 +1,97 @@
 /*  */
 :root {
-    --main-bg-color: #0E063D;
+    --main-bg-color: #000000;
     --main-text-color: #ffffff;
     --machine-color: #FF7A00;
     --human-color: #46E0C4;
-    --main-font: 'Nidus Sans';
-    --body-font: 'Open Sans';
-}
-
-body{
-    height: 100vh;
-    width: auto;
-}
-
-header {
-    display: flex;
-    width: 100%;
-    min-height: 100px;
-    flex-direction: column;
-    align-items: center;
-}
-
-h1 {
-    margin-top: 1rem;
-    font-size: 4rem;
-}
-
-.author {
-    margin: 5px;
-    padding: 2px;
-    font-family: var(--body-font);
-    font-weight: 400;
-    font-size: 1.5rem;
+    --main-font: 'Nidus Sans', sans-serif;
+    --body-font: 'Open Sans', sans-serif;
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    font-family: var(--body-font);
+    
     background-color: var(--main-bg-color);
     color: var(--main-text-color);
-    font-family: var(--main-font);
+}
+
+.container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+
+    max-width: 500px;
+    height: 100%;
+
+    padding: 15px;
+    margin: 4.2rem 0rem 2.4rem 0rem;
 }
 
-img {
-    height: 200px;
-    width: 200px;
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+h1 {
+    font-family: var(--main-font);
+}
+
+.message {
+    font-size: 1.8em;
+}
+
+.score-player, .score-machine {
+    font-size: 45px;
+    font-weight: 800;
 }
 
 .main-display {
-    margin-top: 10%;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    height: 300px;
-    width: 60%;
-    padding-left: 20px;
-    padding-right:20px;
+
+    padding: 20px;
 }
 
-/* place elements side by side */
-.column {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    float: left;
-    width: 33.33%;
-}
+.left, .right {
+    height: 150px;
+    width: 150px;
+    border: solid 1px var(--main-text-color);
 
-/* clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.num-games {
-    font-size: 1.2rem;
-    font-family: var(--body-font);
-}
-
-.scores {
-    display: flex;
-    flex-direction: row;
-    margin: 10px;
-    font-size: 80px;
-}
-
-.scores span {
-    display: flex;
-    width: 70px;
-    align-items: center;
-    justify-content: center;
-}
-
-.player-info {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    min-height: 100px;
-    width: 60%;
-}
-
-.player, .machine {
-    font-size: 1.5rem;
-}
-
-.vs-text {
-    font-size: 1.8rem;
-}
-
-.btn-container {
-    margin-top: 2%;
-    display: flex;
-    height: 100px;
-    width: 40%;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-.btn-container {
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    align-items: center;
+    margin: 5px;
 }
 
 button {
-    height: 100px;
-    width: 100px;
+    cursor: pointer;
+
+    font-size: 16px;
+    font-family: var(--main-font);
+    text-align: center;
+    
+    width: 85px;
+    height: 28px;
     margin: 5px;
-    background-color: #0E063D;
-    color: #ffffff;
-    border-radius: 8px;
+    
+    border: solid 1px var(--main-text-color);
+    color: var(--main-text-color);
+    background-color: var(--main-bg-color);
 }
 
-button img {
-    height: 60px;
-    width: 60px;
-}
-
-footer {
-    font-family: var(--body-font);
-    font-family: 1.2rem;
+/* footer */
+.footer {
     position: fixed;
     left: 0;
     bottom: 0;
-    text-align: center;
+    
     width: 100%;
+
+    text-align: center;
+
+    padding: 15px;
 }
