@@ -26,23 +26,23 @@
             <!-- Main display for user and machine rock/paper/scissors symbols -->
             <div class="main-display">
                 <div class="left">
-                    <img id="player" src="../assets/dark/fist-svgrepo-com.svg" alt="">
+                    <img id="player" src="../assets/dark/rock.svg" alt="">
                 </div>
                 <div class="right">
-                    <img id="machine" src="../assets/dark/paper-svgrepo-com.svg" alt="">
+                    <img id="machine" src="../assets/dark/rock.svg" alt="">
                 </div>
             </div>
             <!-- Controls i.e. buttons for each symbol and game reset/replay buttons -->
             <div class="controls">
                 <div class="row symbols">
-                    <button id="rock">Rock</button>
-                    <button id="paper">Paper</button>
-                    <button id="scissors">Scissors</button>
+                    <button id="rock" type="button" onclick="playerChoice(this.id)">Rock</button>
+                    <button id="paper" onclick="playerChoice(this.id)">Paper</button>
+                    <button id="scissors" onclick="playerChoice(this.id)">Scissors</button>
                 </div>
                 <button id="reset">Reset</button>
             </div>
         </div>
-        <script src="game.js" async type="module"></script>
+        <script src="game.js" type="text/javascript"></script>
     </body>
     <footer class="footer">
         <p>Made by Dhiv Joseph</p>
