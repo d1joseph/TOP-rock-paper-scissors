@@ -1,16 +1,9 @@
 // game.js
-let hudMessage = document.querySelector('.message');
-let playerScore = document.querySelector('score-player');
-let machineScore = document.querySelector('score-machine');
+let reset = false;
 let playerDisplay = document.getElementById('player');
-let machineDisplay = document.getElementById('machine');
-const symbols = [rock, paper, scissors];
-const rockButton = document.getElementById('rock');
-const paperButton = document.getElementById('paper');
-const scissorsButton = document.getElementById('scissors');
 
-let playerChoice = (buttonId) => {
-    // check the button id and render corrosponding img
+let renderPlayerSelection = (buttonId) => {
+    // render appropriate image by id i.e. 'rock' renders rock.svg
     switch (buttonId) {
         case 'rock':
             playerDisplay.src = '../assets/dark/rock.svg';
@@ -23,3 +16,17 @@ let playerChoice = (buttonId) => {
             break
     }
 };
+
+// restart game
+document.getElementById('reset').addEventListener('click',function(){
+    // returns bool based on user input
+    reset = confirm('Press OK to restart\nPress Cancel to keep playing');
+    console.log(reset);
+
+    // if user wants to reset, page is reloaded
+    if (reset) {
+        location.reload();
+    }
+});
+
+

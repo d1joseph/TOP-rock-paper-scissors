@@ -12,12 +12,12 @@
     <body>
         <header>
             <h1 class="app-title">Roshambo</h1>
-            <h3 class="app-description">The ancient game of Rock Raper Scissors</h3>
+            <h2 class="app-description">The ancient game of Rock Raper Scissors</h2>
         </header>
         <!-- HUD display for scores, rounds remaining and round outcomes -->
         <div class="container">
             <div class="hud-display">
-                <h1 class="message">Choose Rock, Paper Or Scissors To Begin!</h1>
+                <h3 class="message">Choose Rock, Paper Or Scissors To Begin!</h3>
                 <div class="row score">
                     <h2 class="score-player">0</h2>
                     <h2 class="score-machine">0</h2>
@@ -35,14 +35,14 @@
             <!-- Controls i.e. buttons for each symbol and game reset/replay buttons -->
             <div class="controls">
                 <div class="row symbols">
-                    <button id="rock" type="button" onclick="playerChoice(this.id)">Rock</button>
-                    <button id="paper" onclick="playerChoice(this.id)">Paper</button>
-                    <button id="scissors" onclick="playerChoice(this.id)">Scissors</button>
+                    <button id="rock" type="button" onclick="renderPlayerSelection(this.id)">Rock</button>
+                    <button id="paper" onclick="renderPlayerSelection(this.id)">Paper</button>
+                    <button id="scissors" onclick="renderPlayerSelection(this.id)">Scissors</button>
                 </div>
                 <button id="reset">Reset</button>
             </div>
         </div>
-        <script src="game.js" type="text/javascript"></script>
+        <script src="game.js"></script>
     </body>
     <footer class="footer">
         <p>Made by Dhiv Joseph</p>

@@ -52,7 +52,7 @@ h2 {
 }
 
 .message {
-    font-size: 1.8em;
+    max-width: 300px;
 }
 
 .score {
