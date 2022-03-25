@@ -37,7 +37,7 @@ header {
     margin: 2.4rem 0rem 2.4rem 0rem;
 }
 
-.row {
+.display__score {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -54,13 +54,9 @@ h2 {
     margin: 0;
 }
 
-.message {
+.display__message {
     max-width: 300px;
     min-height: 50px;
-}
-
-.score {
-    max-height: 100px;
 }
 
 .score-player, .score-machine {
@@ -68,14 +64,14 @@ h2 {
     font-weight: 800;
 }
 
-.main-display {
+.game-view {
     display: flex;
     flex-direction: row;
 
     padding: 20px;
 }
 
-.left, .right {
+.game-view__left, .game-view__right {
     display: flex;
     flex-direction: column;
     align-items: center;

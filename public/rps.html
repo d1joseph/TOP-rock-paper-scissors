@@ -11,35 +11,34 @@
     </head>
     <body>
         <header>
-            <h1 class="app-title">Roshambo</h1>
-            <h2 class="app-description">The ancient game of Rock Raper Scissors</h2>
+            <h1 class="title">Roshambo</h1>
+            <h2 class="description">The ancient game of Rock Raper Scissors</h2>
         </header>
-        <!-- HUD display for scores, rounds remaining and round outcomes -->
         <div class="container">
-            <div class="hud-display">
-                <h3 class="message">Choose Rock, Paper Or Scissors To Begin!</h3>
-                <div class="row score">
+            <div class="display">
+                <h3 class="display__message">Choose Rock, Paper Or Scissors To Begin!</h3>
+                <div class="display__score">
+                    <h5 class="player-1">Player 1</h5>
                     <h2 class="score-player">0</h2>
                     <h2 class="score-machine">0</h2>
+                    <h5 class="player-2">Player 2</h5>
                 </div>
             </div>
-            <!-- Main display for user and machine rock/paper/scissors symbols -->
-            <div class="main-display">
-                <div class="left">
+            <div class="game-view">
+                <div class="game-view__left">
                     <img id="player" src="../assets/dark/rock.svg" alt="">
                 </div>
-                <div class="right">
+                <div class="game-view__right">
                     <img id="machine" src="../assets/dark/rock.svg" alt="">
                 </div>
             </div>
-            <!-- Controls i.e. buttons for each symbol and game reset/replay buttons -->
             <div class="controls">
-                <div class="row symbols">
+                <div class="controls__buttons">
                     <button id="rock" type="button" onclick="renderPlayerSelection(this.id)">Rock</button>
                     <button id="paper" onclick="renderPlayerSelection(this.id)">Paper</button>
                     <button id="scissors" onclick="renderPlayerSelection(this.id)">Scissors</button>
                 </div>
-                <button id="reset">Reset</button>
+                <button id="reset-btn">Reset</button>
             </div>
         </div>
         <script src="game.js"></script>

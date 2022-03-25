@@ -1,7 +1,7 @@
 // game.js
 let reset = false;
 let playerDisplay = document.getElementById('player');
-let message = document.querySelector('.message');
+let message = document.querySelector('.display__message');
 
 let renderPlayerSelection = (buttonId) => {
     // render appropriate image by id i.e. 'rock' renders rock.svg
@@ -34,10 +34,9 @@ let renderPlayerSelection = (buttonId) => {
 
     
 // restart game
-document.getElementById('reset').addEventListener('click',function(){
+document.getElementById('reset-btn').addEventListener('click',function(){
     // returns bool based on user input
     reset = confirm('Press OK to restart\nPress Cancel to keep playing');
-    console.log(reset);
 
     // if user wants to reset, page is reloaded
     if (reset) {
