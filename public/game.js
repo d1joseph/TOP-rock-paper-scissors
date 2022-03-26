@@ -1,21 +1,40 @@
 // game.js
 let reset = false;
-let playerDisplay = document.getElementById('player');
 let message = document.querySelector('.display__message');
+const player1 = document.getElementById('player');
+const player2 = document.getElementById('machine');
 
 let renderPlayerSelection = (buttonId) => {
     // render appropriate image by id i.e. 'rock' renders rock.svg
     switch (buttonId) {
         case 'rock':
-            playerDisplay.src = '../assets/dark/rock.svg';
+            // p1
+            player1.src = '../assets/dark/rock.svg';
+            player1.alt = `Player 1 throws...${buttonId}!`
+            // p2
+            player2.src = '../assets/dark/rock.svg';
+            player2.alt = `Player 2 throws...${buttonId}!`
+            
             message.innerHTML = buttonId;
             break;
         case 'paper':
-            playerDisplay.src = '../assets/dark/paper.svg';
+            // p1
+            player1.src = '../assets/dark/paper.svg';
+            player1.alt = `Player 1 throws...${buttonId}!`
+            // p2
+            player2.src = '../assets/dark/paper.svg';
+            player2.alt = `Player 2 throws...${buttonId}!`
+            
             message.innerHTML = buttonId;
             break
         case 'scissors':
-            playerDisplay.src = '../assets/dark/scissors.svg';
+            // p1
+            player1.src = '../assets/dark/scissors.svg';
+            player1.alt = `Player 1 throws...${buttonId}!`
+            // p2
+            player2.src = '../assets/dark/scissors.svg';
+            player2.alt = `Player 2 throws...${buttonId}!`
+            
             message.innerHTML = buttonId;
             break
     }
