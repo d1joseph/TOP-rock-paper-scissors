@@ -22,6 +22,7 @@ let renderPlayerSelection = (buttonId) => {
 };
 
 // game loop
+
     // set rounds to play chosen by user; 3, 5, 10
     // get player selection
     // randomly generate machine selection

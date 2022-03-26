@@ -41,6 +41,7 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    align-content: center;
 
     min-height: 61px;
     min-width: 300px;
@@ -59,7 +60,7 @@ h2 {
     min-height: 50px;
 }
 
-.score-player, .score-machine {
+#player-1__score, #player-2__score {
     font-size: 45px;
     font-weight: 800;
 }
