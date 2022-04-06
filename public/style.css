@@ -19,7 +19,21 @@ body {
     
     background-color: var(--main-bg-color);
     color: var(--main-text-color);
+
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 
 header {
     padding: 15px;
