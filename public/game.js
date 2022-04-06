@@ -6,6 +6,7 @@ const symbols = {
     'scissors':'../assets/dark/scissors.svg',
 };
 
+
 let reset = false; // resets the game if true
 let round; // round counter
 let message = document.querySelector('.display__message'); // outputs the evaluated outcome
@@ -16,6 +17,9 @@ const player2 = document.getElementById('machine');
 // scores
 let player1Score = document.getElementById('.player-1__score');
 let player2Score = document.getElementById('.player-2__score');
+// choices
+let player1Choice;
+let player2Choice;
 
 
 let Play = (buttonId) => {
@@ -27,8 +31,8 @@ let Play = (buttonId) => {
             player1.alt = `Player 1 throws...${buttonId}!`
             
             // p2
-            player2.src = '../assets/dark/rock.svg';
-            player2.alt = `Player 2 throws...${buttonId}!`
+            player2.src = randomSelect(symbols);
+            player2.alt = `Player 2 throws...!`
             
             message.innerHTML = buttonId;
             break;
@@ -38,8 +42,8 @@ let Play = (buttonId) => {
             player1.src = symbols.paper;
             player1.alt = `Player 1 throws...${buttonId}!`
             // p2
-            player2.src = '../assets/dark/paper.svg';
-            player2.alt = `Player 2 throws...${buttonId}!`
+            player2.src = randomSelect(symbols);
+            player2.alt = `Player 2 throws...!`
             
             message.innerHTML = buttonId;
             break
@@ -49,8 +53,8 @@ let Play = (buttonId) => {
             player1.src = symbols.scissors;
             player1.alt = `Player 1 throws...${buttonId}!`
             // p2
-            player2.src = '../assets/dark/scissors.svg';
-            player2.alt = `Player 2 throws...${buttonId}!`
+            player2.src = randomSelect(symbols);
+            player2.alt = `Player 2 throws...!`
             
             message.innerHTML = buttonId;
             break
@@ -58,7 +62,10 @@ let Play = (buttonId) => {
 };
 
 // random choice select method
-
+let randomSelect = (symbolObj) => {
+    let keys = Object.keys(symbolObj);
+    return symbolObj[keys[Math.floor(Math.random() * keys.length)]];
+}
 // game loop
     
     
